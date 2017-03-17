@@ -24,7 +24,7 @@ function prompt () {
   local -r FG_MAGENTA="\[$(tput setaf 5)\]"
   local -r FG_CYAN="\[$(tput setaf 6)\]"
 
-  # Do put all the git stuff onto PS1
+  # Put all the git stuff onto PS1
   function __git_info() {
     local -r GIT_BRANCH_SYMBOL='⑂ '
     local -r GIT_BRANCH_CHANGED_SYMBOL='+'
@@ -56,11 +56,13 @@ function prompt () {
   # ----first line----
   PS1+="\n$RESET"
   # green color, pipe and user
-  PS1+="$FG_GREEN┌─\u"
+  PS1+="$FG_GREEN┌ \u"
   # blue color, @ [workingdir]
   PS1+="$FG_CYAN @ \w"
+  # extra bar
+  PS1+="\n$FG_GREEN│ "
   # violet, date and time
-  PS1+="$FG_MAGENTA \d \t"
+  PS1+="$FG_MAGENTA\t \d"
   # green color, git stuff
   PS1+="$FG_GREEN";
   __git_info
@@ -68,7 +70,7 @@ function prompt () {
   PS1+="\n"
   # ----second line----
   # green color, end of pipe
-  PS1+="$FG_GREEN└─"
+  PS1+="$FG_GREEN└ "
   # command num
   PS1+="[\#] ";
   # cash prompt
