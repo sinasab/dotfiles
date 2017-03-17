@@ -17,6 +17,7 @@ function prompt () {
   # Escape sequences for formatting
   local -r RESET="\[$(tput sgr0)\]"
   # Solarized colorscheme
+  local -r FG_BLACK="\[$(tput setaf 0)\]"
   local -r FG_RED="\[$(tput setaf 1)\]"
   local -r FG_GREEN="\[$(tput setaf 2)\]"
   local -r FG_YELLOW="\[$(tput setaf 3)\]"
@@ -28,8 +29,8 @@ function prompt () {
   function __git_info() {
     local -r GIT_BRANCH_SYMBOL='⑂ '
     local -r GIT_BRANCH_CHANGED_SYMBOL='+'
-    local -r GIT_NEED_PUSH_SYMBOL='⇡'
-    local -r GIT_NEED_PULL_SYMBOL='⇣'
+    local -r GIT_NEED_PUSH_SYMBOL='▲'
+    local -r GIT_NEED_PULL_SYMBOL='▼'
 
     [ -x "$(which git)" ] || return    # git not found
     # get current branch name or short SHA1 hash for detached head
@@ -58,7 +59,7 @@ function prompt () {
   # green color, pipe and user
   PS1+="$FG_GREEN┌ \u"
   # blue color, @ [workingdir]
-  PS1+="$FG_CYAN @ \w"
+  PS1+="$FG_CYAN @\w"
   # extra bar
   PS1+="\n$FG_GREEN│ "
   # violet, date and time
