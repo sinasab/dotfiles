@@ -32,28 +32,38 @@ function prompt () {
     # check if we're in a git repo. (fast)
     git rev-parse --is-inside-work-tree &>/dev/null || return
     # git symbols
-    local -r GIT_BRANCH_SYMBOL='⑂ '
     local -r GIT_BRANCH_CHANGED_SYMBOL='+'
     local -r GIT_NEED_PUSH_SYMBOL='▲'
     local -r GIT_NEED_PULL_SYMBOL='▼'
-
-    [ -x "$(which git)" ] || return    # git not found
-    # get current branch name or short SHA1 hash for detached head
-    local branch="$(git symbolic-ref --short HEAD 2>/dev/null || git describe --tags --always 2>/dev/null)"
-    [ -n "$branch" ] || return  # git branch not found
-
-    local marks
-
-    # branch is modified?
-    [ -n "$(git status --porcelain)" ] && marks+=" $GIT_BRANCH_CHANGED_SYMBOL"
-
-    # how many commits local branch is ahead/behind of remote?
-    local stat="$(git status --porcelain --branch | grep '^##' | grep -o '\[.\+\]$')"
-    local aheadN="$(echo $stat | grep -o 'ahead [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
-    local behindN="$(echo $stat | grep -o 'behind [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+    # check for what branch we're on. (fast)
+    #   if… HEAD isn’t a symbolic ref (typical branch),
+    #   then… get a tracking remote branch or tag
+    #   otherwise… get the short SHA for the latest commit
+    #   lastly just give up.
+    local -r branch="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+      git describe --all --exact-match HEAD 2> /dev/null || \
+      git rev-parse --short HEAD 2> /dev/null || \
+      '(unknown)')";
+    # git status to parse for numChanges, aheadN and behindN
+    local stat="$(git status --porcelain --branch)"
+    # how many uncommited changes (staged and unstaged)
+    # parse into numChanges, and how far ahead/behind remote
+    local numChanges="$(echo "$(echo "${stat}" | wc -l)"-1 | bc)"
+    local branchStat="$(echo "${stat}" | grep '^##' | grep -o '\[.\+\]$')"
+    local aheadN="$(echo $branchStat | grep -o 'ahead [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+    local behindN="$(echo $branchStat | grep -o 'behind [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+    # include these values if appropriate
+    local marks=""
+    [ "$numChanges" -gt 0 ] && marks+=" $GIT_BRANCH_CHANGED_SYMBOL$numChanges"
     [ -n "$aheadN" ] && marks+=" $GIT_NEED_PUSH_SYMBOL$aheadN"
     [ -n "$behindN" ] && marks+=" $GIT_NEED_PULL_SYMBOL$behindN"
 
+    # set proper color
+    if [ -z "$marks" ]; then
+      PS1+="$FG_GREEN"
+    else
+      PS1+="$FG_YELLOW"
+    fi
     # print the git branch segment without a trailing newline
     PS1+=" $branch$marks "
   }
@@ -63,7 +73,7 @@ function prompt () {
   PS1+="\n$RESET"
   # set color, pipe and user
   PS1+="$FG_CYAN┌ \u"
-  # set color, [workingdir]
+  # set color, @ [workingdir]
   PS1+="$FG_MAGENTA \w"
   # extra bar
   PS1+="\n$FG_CYAN│ "
@@ -79,7 +89,9 @@ function prompt () {
   # command num
   PS1+="[\#] ";
   # cash prompt
-  if [ $EXIT != 0 ]; then
+  if [ $EXIT -eq 0 ]; then
+    PS1+="$FG_GREEN";
+  else
     PS1+="$FG_RED";
   fi
   PS1+="\$ "
