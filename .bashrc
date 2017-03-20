@@ -61,22 +61,21 @@ function prompt () {
   PS1=""
   # ----first line----
   PS1+="\n$RESET"
-  # green color, pipe and user
-  PS1+="$FG_GREEN┌ \u"
-  # blue color, @ [workingdir]
-  PS1+="$FG_CYAN @\w"
+  # set color, pipe and user
+  PS1+="$FG_CYAN┌ \u"
+  # set color, [workingdir]
+  PS1+="$FG_MAGENTA \w"
   # extra bar
-  PS1+="\n$FG_GREEN│ "
-  # violet, date and time
+  PS1+="\n$FG_CYAN│ "
+  # set color, date and time
   PS1+="$FG_MAGENTA\t \d"
-  # green color, git stuff
-  PS1+="$FG_GREEN";
+  # git stuff
   __git_info
   # end with newline
   PS1+="\n"
   # ----second line----
-  # green color, end of pipe
-  PS1+="$FG_GREEN└ "
+  # set color, end of pipe
+  PS1+="$FG_CYAN└ "
   # command num
   PS1+="[\#] ";
   # cash prompt
@@ -84,9 +83,9 @@ function prompt () {
     PS1+="$FG_RED";
   fi
   PS1+="\$ "
-  # reset
+  # reset styles
   PS1+="$RESET"
-  PS2="⚡"
+  PS2="⚡ "
 }
 PROMPT_COMMAND=prompt
 
