@@ -21,12 +21,17 @@ function prompt () {
   local -r FG_RED="\[$(tput setaf 1)\]"
   local -r FG_GREEN="\[$(tput setaf 2)\]"
   local -r FG_YELLOW="\[$(tput setaf 3)\]"
-  local -r FG_BLUE="\[$(tput setaf 4)\]"
+  local -r FG_BLUE="\[$(tput setaf 4)\]" # looks too much like cyan
   local -r FG_MAGENTA="\[$(tput setaf 5)\]"
   local -r FG_CYAN="\[$(tput setaf 6)\]"
 
   # Put all the git stuff onto PS1
   function __git_info() {
+    # check if git is installed
+    [ -x "$(which git)" ] || return
+    # check if we're in a git repo. (fast)
+    git rev-parse --is-inside-work-tree &>/dev/null || return
+    # git symbols
     local -r GIT_BRANCH_SYMBOL='⑂ '
     local -r GIT_BRANCH_CHANGED_SYMBOL='+'
     local -r GIT_NEED_PUSH_SYMBOL='▲'
