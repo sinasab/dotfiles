@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # bash prompt goodness lives here
 
 # Automatically trim long paths in the prompt (requires Bash 4.x)

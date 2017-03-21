@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 declare -a FILES_TO_SYMLINK=(
   '.bashrc'
   '.bash_profile'
