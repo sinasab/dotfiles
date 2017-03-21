@@ -6,6 +6,7 @@ declare -a FILES_TO_SYMLINK=(
   '.bash_prompt'
   '.aliases'
   '.bash_tweaks'
+  '.bash_git_completion'
   '.editorconfig'
   '.hyper.js'
 )
