@@ -14,8 +14,8 @@ for i in ${FILES_TO_SYMLINK[@]}; do
   sourceFile="$(pwd)/$i"
   targetFile="$HOME/$i"
   rm "$targetFile"
-  ln -fs $sourceFile $targetFile
-  echo "linked $i"
+  ln -sf $sourceFile $targetFile
+  echo "symlinked $i"
 done
 unset sourceFile
 unset targetFile

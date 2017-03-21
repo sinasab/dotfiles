@@ -1,13 +1,11 @@
 # bash prompt goodness lives here
-# exporting PS1, PS2, and setting PROMPT_DIRTRIM
 
 # Automatically trim long paths in the prompt (requires Bash 4.x)
 # PROMPT_DIRTRIM=2
 
-function prompt () {
+function prompt_command () {
   # This has to be first; exit code of previous command
   local -r EXIT="$?"
-  echo "ayy"
   # Escape sequences for formatting
   local -r RESET="\[$(tput sgr0)\]"
   # Solarized colorscheme
@@ -66,7 +64,7 @@ function prompt () {
   # ----first line----
   PS1+="\n$RESET"
   # set color, pipe and user
-  PS1+="$FG_CYAN┌ \u"
+  PS1+="$FG_CYAN┌ \u@\h"
   # set color, @ [workingdir]
   PS1+="$FG_MAGENTA \w"
   # extra bar
@@ -75,6 +73,7 @@ function prompt () {
   PS1+="$FG_MAGENTA\t \d"
   # git stuff
   __git_info
+  unset __git_info
   # end with newline
   PS1+="\n"
   # ----second line----
@@ -92,6 +91,5 @@ function prompt () {
   # reset styles
   PS1+="$RESET"
   PS2="⚡ "
-  echo "ayy"
 }
-PROMPT_COMMAND=prompt
+export PROMPT_COMMAND=prompt_command
