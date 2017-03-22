@@ -28,11 +28,12 @@ bind "set show-all-if-ambiguous on"
 bind "set mark-symlinked-directories on"
 
 ### history stuff ###
-# Huge history. Because why not?
-export HISTSIZE=500000
-export HISTFILESIZE=100000
-# Append to the history file, don't overwrite it
-shopt -s histappend
+# keep history up to date, across sessions, in realtime
+#  http://unix.stackexchange.com/a/48113
+export HISTCONTROL="erasedups:ignoreboth" # no duplicate entries
+export HISTSIZE=100000 # big big history (default is 500)
+export HISTFILESIZE=$HISTSIZE # big big history
+type shopt &> /dev/null && shopt -s histappend # append to history, don't overwrite it
 # Save multi-line commands as one command
 shopt -s cmdhist
 # Avoid duplicate entries
@@ -41,6 +42,8 @@ export HISTCONTROL="erasedups:ignoreboth"
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 # Use standard ISO 8601 timestamp
 HISTTIMEFORMAT='%F %T ' # %F=%Y-%m-%d, %T=%H:%M:%S (24-hr format)
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # enable history expansion with space
 bind Space:magic-space
 # see http://codeinthehole.com/writing/the-most-important-command-line-tip-incremental-history-searching-with-inputrc/

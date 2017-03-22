@@ -8,6 +8,7 @@ declare -a FILES_TO_SYMLINK=(
   '.bash_tweaks'
   '.bash_git_completion'
   '.editorconfig'
+  '.gitconfig'
   '.hyper.js'
 )
 sourceFile=''
@@ -22,3 +23,4 @@ done
 unset sourceFile
 unset targetFile
 unset i
+source ~/.bash_profile
