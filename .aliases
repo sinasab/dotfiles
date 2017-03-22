@@ -8,8 +8,6 @@ alias rm='rm -i -v'
 alias cp='cp -v'
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
-# undo a commit
-alias undocommit='git reset --hard HEAD~1'
 
 # clone a git repo, cd into it, install yarn dependencies
 function clone() {
