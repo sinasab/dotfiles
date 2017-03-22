@@ -2,6 +2,7 @@
 # tweaks for a nicer time using bash
 
 ### general options ###
+export EDITOR="vim"
 # ls colors
 export LS_COLORS="ow=01;36;40"
 # Update window size after every command
