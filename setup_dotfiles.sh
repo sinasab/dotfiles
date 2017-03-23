@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function hookup_symlinks () {
+function setup_dotfiles () {
   declare -a FILES_TO_SYMLINK=(
   # bash stuff
   'aliases'
@@ -56,13 +56,30 @@ function hookup_symlinks () {
   # log what was backed up, successes, and failures.
   # it's good to reflect.
   [ ${#BACKEDUP_FILES[@]} -ne 0 ] && \
-    echo -e "These files were backed up to $backupFolder:\n${BACKEDUP_FILES[@]}\n"
+    echo -e "These files were backed up to $backupFolder: \
+      \n${BACKEDUP_FILES[@]}\n"
   [ ${#SUCCESSFUL_FILES[@]} -ne 0 ] && \
     echo -e "These files were symlinked successfully:\n${SUCCESSFUL_FILES[@]}\n"
   [ ${#FAILED_FILES[@]} -ne 0 ] && \
     echo -e "These files weren't symlinked successfully:\
       \n${FAILED_FILES[@]}\n" && \
     echo "Perhaps some of these files were missing from $sourceDir?\n"
+
+  # we can log any files in the dotfiles repo that don't get linked
+  declare -a UNLINKED_SOURCEDIR_FILES=()
+  local skip
+  for file in $(ls -a); do
+     skip=
+     for j in "${SUCCESSFUL_FILES[@]}" "${FAILED_FILES[@]}"; do
+         [[ $file == $j ]] && { skip=1; break; }
+     done
+     [[ -n $skip ]] || UNLINKED_SOURCEDIR_FILES+=("$file")
+  done
+  [ ${#UNLINKED_SOURCEDIR_FILES[@]} -ne 0 ] && \
+    echo -e "These files were in $sourceDir but weren't symlinked: \
+      \n${UNLINKED_SOURCEDIR_FILES[@]}\n"
+
+  echo -e "\n\nDone!\n\n"
 }
-hookup_symlinks
-unset hookup_symlinks
+setup_dotfiles
+unset setup_dotfiles
