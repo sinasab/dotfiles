@@ -1,26 +1,32 @@
 #!/usr/bin/env bash
-declare -a FILES_TO_SYMLINK=(
-  '.bashrc'
-  '.bash_profile'
-  '.extra'
-  '.bash_prompt'
-  '.aliases'
-  '.bash_tweaks'
-  '.bash_git_completion'
-  '.editorconfig'
-  '.gitconfig'
-  '.hyper.js'
-)
-sourceFile=''
-targetFile=''
-for i in ${FILES_TO_SYMLINK[@]}; do
-  sourceFile="$(pwd)/$i"
-  targetFile="$HOME/$i"
-  rm "$targetFile"
-  ln -sf $sourceFile $targetFile
-  echo "symlinked $i"
-done
-unset sourceFile
-unset targetFile
-unset i
+
+function hookup_symlinks () {
+  declare -a FILES_TO_SYMLINK=(
+  'aliases'
+  'bash_git_completion'
+  'bash_logout'
+  'bash_profile'
+  'bash_prompt'
+  'bash_tweaks'
+  'bashrc'
+  'editorconfig'
+  'extra'
+  'gitconfig'
+  'hyper.js'
+  'inputrc'
+  'tmux.conf'
+  )
+  local sourceFile=''
+  local targetFile=''
+  local file=''
+  for file in ${FILES_TO_SYMLINK[@]}; do
+    sourceFile="$(pwd)/$file"
+    targetFile="$HOME/.$file"
+    rm "$targetFile"
+    ln -sf $sourceFile $targetFile
+    echo "symlinked $file"
+  done
+}
+hookup_symlinks
+unset hookup_symlinks
 source ~/.bash_profile

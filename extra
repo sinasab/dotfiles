@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# sourced by ./.bash_profile
+PATH="$PATH:$HOME/bin";
+PATH="$PATH:/home/sina/anaconda2/bin"
+export PATH
+
+alias node='nodejs'
+alias cdworkfolder='cd /mnt/c/Users/sina/Documents/projects'
+export projects="/mnt/c/Users/sina/Documents/projects"
