@@ -4,9 +4,13 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Disable beeping and window flashing.
 set bell-style none
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Use case-insensitive TAB autocompletion.
 set completion-ignore-case on
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Auto list TAB completions.
 set show-all-if-ambiguous off
+# Treat hyphens and underscores as equivalent
+set completion-map-case on
+# Display matches for ambiguous patterns at first tab press
+set show-all-if-ambiguous on
+# Use Alt/Meta + Delete to delete the preceding word
+"\e[3;3~": kill-word

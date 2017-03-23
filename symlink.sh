@@ -29,4 +29,3 @@ function hookup_symlinks () {
 }
 hookup_symlinks
 unset hookup_symlinks
-source ~/.bash_profile

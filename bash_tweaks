@@ -19,14 +19,14 @@ shopt -s cdable_vars
 ### tab completion stuff ###
 # Correct spelling errors during tab-completion
 shopt -s dirspell 2> /dev/null
-# Perform file completion in a case insensitive fashion
-bind "set completion-ignore-case on"
-# Treat hyphens and underscores as equivalent
-bind "set completion-map-case on"
-# Display matches for ambiguous patterns at first tab press
-bind "set show-all-if-ambiguous on"
 # Immediately add a trailing slash when autocompleting symlinks to directories
 bind "set mark-symlinked-directories on"
+# Include filenames beginning with a "." in the filename expansion.
+shopt -s dotglob
+# use extended pattern matching features
+shopt -s extglob
+# match filenames in case-insensitive fashion
+shopt -s nocaseglob
 
 ### history stuff ###
 # keep history up to date, across sessions, in realtime

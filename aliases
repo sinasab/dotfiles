@@ -4,8 +4,9 @@ alias gs='git status -s'
 alias gaa='git commit -a --amend --reuse-message=HEAD'
 alias ls='ls --color'
 alias mv='mv -v'
-alias rm='rm -i -v'
+alias rm='rm -v'
 alias cp='cp -v'
+alias bashreset='source ~/.bashrc'
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
