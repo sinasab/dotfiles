@@ -2,6 +2,7 @@
 
 function hookup_symlinks () {
   declare -a FILES_TO_SYMLINK=(
+  # bash stuff
   'aliases'
   'bash_git_completion'
   'bash_logout'
@@ -9,11 +10,13 @@ function hookup_symlinks () {
   'bash_prompt'
   'bash_tweaks'
   'bashrc'
-  'editorconfig'
   'extra'
+  'inputrc'
+
+  # configs
+  'editorconfig'
   'gitconfig'
   'hyper.js'
-  'inputrc'
   'tmux.conf'
   )
   local sourceFile=''
