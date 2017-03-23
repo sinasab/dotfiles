@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 alias gs='git status -s'
-alias gaa='git commit -a --amend --reuse-message=HEAD'
+alias gcaa='git commit -a --amend --reuse-message=HEAD'
 alias ls='ls --color'
 alias mv='mv -v'
 alias rm='rm -v'

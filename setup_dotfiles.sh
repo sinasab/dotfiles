@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function setup_dotfiles () {
+function set_base_dotfiles () {
   declare -a FILES_TO_SYMLINK=(
   # bash stuff
   'aliases'
@@ -37,7 +37,8 @@ function setup_dotfiles () {
   declare -a SUCCESSFUL_FILES=()
   declare -a FAILED_FILES=()
 
-  echo -e "beginning setup! this will symlink a bunch of dotfiles and back up any that are replaced.\n\n"
+  echo -e "beginning setup! this will symlink a bunch of dotfiles and back up" \
+    "any that are replaced.\n\n"
   for file in ${FILES_TO_SYMLINK[@]}; do
     newFile="$sourceDir/$file"
     oldFile="$HOME/.$file"
@@ -56,13 +57,13 @@ function setup_dotfiles () {
   # log what was backed up, successes, and failures.
   # it's good to reflect.
   [ ${#BACKEDUP_FILES[@]} -ne 0 ] && \
-    echo -e "These files were backed up to $backupFolder: \
-      \n${BACKEDUP_FILES[@]}\n"
+    echo -e "These files were backed up to $backupFolder:" \
+      "\n${BACKEDUP_FILES[@]}\n"
   [ ${#SUCCESSFUL_FILES[@]} -ne 0 ] && \
     echo -e "These files were symlinked successfully:\n${SUCCESSFUL_FILES[@]}\n"
   [ ${#FAILED_FILES[@]} -ne 0 ] && \
-    echo -e "These files weren't symlinked successfully:\
-      \n${FAILED_FILES[@]}\n" && \
+    echo -e "These files weren't symlinked successfully:" \
+      "\n${FAILED_FILES[@]}\n" && \
     echo "Perhaps some of these files were missing from $sourceDir?\n"
 
   # we can log any files in the dotfiles repo that don't get linked
@@ -76,10 +77,11 @@ function setup_dotfiles () {
      [[ -n $skip ]] || UNLINKED_SOURCEDIR_FILES+=("$file")
   done
   [ ${#UNLINKED_SOURCEDIR_FILES[@]} -ne 0 ] && \
-    echo -e "These files were in $sourceDir but weren't symlinked: \
-      \n${UNLINKED_SOURCEDIR_FILES[@]}\n"
+    echo -e "These files were in $sourceDir but weren't symlinked:" \
+      "\n${UNLINKED_SOURCEDIR_FILES[@]}\n"
 
-  echo -e "\n\nDone!\n\n"
 }
-setup_dotfiles
-unset setup_dotfiles
+set_base_dotfiles
+unset setup_base_dotfiles
+
+echo -e "\n\nDone!\n\n"
