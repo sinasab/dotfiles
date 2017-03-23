@@ -6,6 +6,7 @@ alias ls='ls --color'
 alias mv='mv -v'
 alias rm='rm -v'
 alias cp='cp -v'
+alias aptu="sudo apt-get update && sudo apt-get upgrade"
 alias bashreset='source ~/.bashrc'
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
