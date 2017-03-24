@@ -30,7 +30,7 @@ function set_base_dotfiles () {
   [ -d "$dotfilesOld" ] || mkdir "$dotfilesOld"
 
   # used inside of the loop
-  local newFile=''
+  local sourceFile=''
   local oldFile=''
   local file=''
 
@@ -42,14 +42,14 @@ function set_base_dotfiles () {
   echo -e "beginning setup! this will symlink a bunch of dotfiles and back up" \
     "any that are replaced.\n\n"
   for file in ${FILES_TO_SYMLINK[@]}; do
-    newFile="$sourceDir/$file"
+    sourceFile="$sourceDir/$file"
     oldFile="$HOME/.$file"
 
     [ -f "$oldFile" ] && \
       BACKEDUP_FILES+=("~/.$file") && \
       mv "$oldFile" "$backupFolder"
-    if [ -f "$newFile" ]; then
-      ln -sf $newFile $oldFile && \
+    if [ -f "$sourceFile" ]; then
+      ln -sf $sourceFile $oldFile && \
         SUCCESSFUL_FILES+=("$file") || \
         FAILED_FILES+=("$file")
     else
