@@ -46,9 +46,9 @@ function set_base_dotfiles () {
     oldFile="$HOME/.$file"
 
     [ -f "$oldFile" ] && \
-      BACKEDUP_FILES+=("~/.$file") && \
-      mv "$oldFile" "$backupFolder"
-    if [ -f "$sourceFile" ]; then
+      mv $oldFile $backupFolder  && \
+      BACKEDUP_FILES+=("~/.$file")
+    if [ -f "$sourceFile" -o -d "$sourceFile" ]; then
       ln -sf $sourceFile $oldFile && \
         SUCCESSFUL_FILES+=("$file") || \
         FAILED_FILES+=("$file")
