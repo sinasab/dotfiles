@@ -18,6 +18,8 @@ function set_base_dotfiles () {
   'gitconfig'
   'hyper.js'
   'tmux.conf'
+  'vimrc'
+  'vim'
   )
   local sourceDir="$(pwd)"
 
