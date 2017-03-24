@@ -1,1 +1,0 @@
-/home/sina/.vim
