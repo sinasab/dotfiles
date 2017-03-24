@@ -65,8 +65,8 @@ function set_base_dotfiles () {
     echo -e "These files were symlinked successfully:\n${SUCCESSFUL_FILES[@]}\n"
   [ ${#FAILED_FILES[@]} -ne 0 ] && \
     echo -e "These files weren't symlinked successfully:" \
-      "\n${FAILED_FILES[@]}\n" && \
-    echo "Perhaps some of these files were missing from $sourceDir?\n"
+      "\n${FAILED_FILES[@]}" && \
+    echo -e "Perhaps some of these files were missing from $sourceDir?\n"
 
   # we can log any files in the dotfiles repo that don't get linked
   declare -a UNLINKED_SOURCEDIR_FILES=()
