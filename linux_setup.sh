@@ -86,4 +86,4 @@ function set_base_dotfiles () {
 set_base_dotfiles
 unset setup_base_dotfiles
 
-echo -e "\n\nDone!\n\n"
+echo -e "\nDone!\n"
