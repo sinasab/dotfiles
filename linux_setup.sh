@@ -45,7 +45,7 @@ function set_base_dotfiles () {
     sourceFile="$sourceDir/$file"
     oldFile="$HOME/.$file"
     # backup the file about to be replaced if it already exists
-    [ -f "$oldFile" ] && \
+    [ -f "$oldFile" -o -d "$oldFile" ] && \
       mv $oldFile $backupFolder  && \
       BACKEDUP_FILES+=("~/.$file")
     # symlink!
