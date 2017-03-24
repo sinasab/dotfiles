@@ -44,10 +44,11 @@ function set_base_dotfiles () {
   for file in ${FILES_TO_SYMLINK[@]}; do
     sourceFile="$sourceDir/$file"
     oldFile="$HOME/.$file"
-
+    # backup the file about to be replaced if it already exists
     [ -f "$oldFile" ] && \
       mv $oldFile $backupFolder  && \
       BACKEDUP_FILES+=("~/.$file")
+    # symlink!
     if [ -f "$sourceFile" -o -d "$sourceFile" ]; then
       ln -sf $sourceFile $oldFile && \
         SUCCESSFUL_FILES+=("$file") || \
