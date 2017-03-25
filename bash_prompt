@@ -41,7 +41,7 @@ function prompt_command () {
     local stat="$(git status --porcelain --branch)"
     # how many uncommited changes (staged and unstaged)
     # parse into numChanges, and how far ahead/behind remote
-    local numChanges="$(echo "$(echo "${stat}" | wc -l)"-1 | bc)"
+    local numChanges=$(($(echo "${stat}" | wc -l) - 1))
     local branchStat="$(echo "${stat}" | grep '^##' | grep -o '\[.\+\]$')"
     local aheadN="$(echo $branchStat | grep -o 'ahead [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
     local behindN="$(echo $branchStat | grep -o 'behind [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
