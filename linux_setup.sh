@@ -10,7 +10,6 @@ function set_base_dotfiles () {
   'bash_prompt'
   'bash_tweaks'
   'bashrc'
-  'extra'
   'inputrc'
 
   # configs
