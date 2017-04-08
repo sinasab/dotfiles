@@ -54,3 +54,5 @@
 [include]
   # local config file
   path = ~/.gitconfig.local
+[status]
+	showUntrackedFiles = all
