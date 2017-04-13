@@ -56,3 +56,5 @@
   path = ~/.gitconfig.local
 [status]
 	showUntrackedFiles = all
+[core]
+	editor = vim
