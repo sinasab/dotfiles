@@ -59,6 +59,13 @@ set wildmode=list:longest
 set wrap
 set colorcolumn=85
 
+" file explorer stuff
+let g:netrw_liststyle = 3 " use tree list style
+let g:netrw_banner = 0 " get rid of banner at the top
+let g:netrw_browse_split = 2 " open files in a new vertical split
+let g:netrw_winsize = 25 " width of the explorer pane
+nnoremap <Leader><Tab> :Vex " keybinding to open tree
+
 " keybindings here
 nnoremap gf :vertical wincmd f<CR>
 nnoremap <tab> %
