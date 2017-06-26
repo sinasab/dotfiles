@@ -34,7 +34,7 @@ set nu
 set number " always show line numbers
 set path+=** " provides tab-completion searching into subfolders
 set relativenumber
-set scrolloff=5
+set scrolloff=10
 set shiftround " use multiple of shiftwidth when indenting with < and >
 set shiftwidth=2 " number of spaces to use for autoindenting
 set showcmd
