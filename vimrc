@@ -36,7 +36,7 @@ set path+=** " provides tab-completion searching into subfolders
 set relativenumber
 set scrolloff=5
 set shiftround " use multiple of shiftwidth when indenting with < and >
-set shiftwidth=4 " number of spaces to use for autoindenting
+set shiftwidth=2 " number of spaces to use for autoindenting
 set showcmd
 set showmatch " show matching parens
 set showmode
@@ -44,7 +44,7 @@ set smartcase " ignore case if search pattern is all lowercase, case-sensitive o
 set splitbelow " open horizontal splits to the bottom instead of top
 set splitright " open vertical splits to the right instead of left
 set statusline=%.40F%=%m\ %Y\ Line:\ %3l/%L[%3p%%]
-set tabstop=4 " tab is 4 spaces
+set tabstop=2 " tab is 4 spaces
 set textwidth=80
 set title " change the terminal's title
 set ttyfast
