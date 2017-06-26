@@ -58,3 +58,4 @@
 	showUntrackedFiles = all
 [core]
 	editor = vim
+  excludesfile = ~/.gitignore_global

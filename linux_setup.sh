@@ -15,6 +15,7 @@ function set_base_dotfiles () {
   # configs
   'editorconfig'
   'gitconfig'
+  'gitignore_global'
   'hyper.js'
   'tmux.conf'
   'vimrc'
