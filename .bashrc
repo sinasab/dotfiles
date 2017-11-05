@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-[ -n "$PS1" ] && source ~/.bash_profile;
+[ -n "$PS1" ];
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 
@@ -38,7 +38,6 @@ shopt -s cmdhist # Save multi-line commands as one command
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear" # Don't record some commands
 # Use standard ISO 8601 timestamp
 HISTTIMEFORMAT='%F %T ' # %F=%Y-%m-%d, %T=%H:%M:%S (24-hr format)
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND" # Save and reload the history after each command finishes
 bind Space:magic-space # enable history expansion with space
 # see http://codeinthehole.com/writing/the-most-important-command-line-tip-incremental-history-searching-with-inputrc/
 bind '"\e[A": history-search-backward'
@@ -52,4 +51,3 @@ set completion-ignore-case on # Use case-insensitive TAB autocompletion.
 set show-all-if-ambiguous off # Auto list TAB completions.
 set completion-map-case on # Treat hyphens and underscores as equivalent
 set show-all-if-ambiguous on # Display matches for ambiguous patterns at first tab press
-"\e[3;3~": kill-word # Use Alt/Meta + Delete to delete the preceding word
