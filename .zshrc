@@ -12,9 +12,8 @@ plugins=( \
   colorize \
   command-not-found \
   cp \
-  history-substring-search \
   zsh-syntax-highlighting \
-  zsh-history-substring-search \
+  history-substring-search \
 )
 source $ZSH/oh-my-zsh.sh
 
