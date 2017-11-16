@@ -1,2 +1,10 @@
 # dotfiles
-My dotfiles.
+
+## Setup
+### Copy
+- #TODO
+
+### Install
+-
+
+### Configure
