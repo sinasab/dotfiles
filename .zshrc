@@ -56,6 +56,11 @@ setopt complete_in_word # Allow completion from within a word/phrase
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt correct_all # don't ask if i misspelled stuff
 
+# edit commands in vim by pressing v while in command mode
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 # change window titles to custom things easily
 # Source: http://superuser.com/a/344397
 DISABLE_AUTO_TITLE="true"
@@ -67,7 +72,7 @@ iterm_both () { set_iterm_name 0 $@; }
 iterm_tab () { set_iterm_name 1 $@; }
 iterm_window () { set_iterm_name 2 $@; }
 
-# various shell options
+# misc shell options
 setopt auto_cd      # chdir to directory if we type its name only
 setopt auto_pushd    # put directory on dir stack after chdir
 setopt pushd_ignore_dups  # do not place duplicates on directory stack
