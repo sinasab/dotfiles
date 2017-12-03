@@ -31,6 +31,9 @@ export EDITOR=vim
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export KEYTIMEOUT=1
 
+# aliases
+alias gist='gist -pcso'
+
 # history options
 HISTSIZE=10000000
 SAVEHIST=10000000
