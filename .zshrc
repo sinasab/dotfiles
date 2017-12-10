@@ -58,7 +58,6 @@ setopt auto_name_dirs # any parameter that is set to the absolute name of a dire
 setopt complete_in_word # Allow completion from within a word/phrase
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt correct_all # don't ask if i misspelled stuff
-v elllllllllitv editv edit
 # edit commands in vim by pressing v while in command mode
 autoload -U edit-command-line
 zle -N edit-command-line
