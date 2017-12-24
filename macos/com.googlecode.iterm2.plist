@@ -282,9 +282,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>461 301 937 512 0 0 1440 878 </string>
+	<string>461 301 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>180 71 650 427 0 0 1440 878 </string>
+	<string>176 70 650 427 0 0 1440 900 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>176 70 650 427 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>251 114 665 427 0 0 1440 878 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>194 4 650 427 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1574,8 +1580,12 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>532498245.91948199</real>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1610,7 +1620,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/sina/projects/dotfiles</string>
+	<string>/Users/sina/projects/dotfiles/macos</string>
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1622,7 +1632,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-16T04:14:31Z</date>
+	<date>2017-12-17T02:15:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
