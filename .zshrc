@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 # path stuff
 PATH=$PATH:$HOME/bin
 PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
+PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH;
 
 # keybindings
@@ -86,3 +87,4 @@ setopt null_glob    # delete word if no match is found
 setopt mail_warning    # warn if mail file was accessed from last login
 setopt nobeep      # prevent beeps
 unsetopt null_glob    # prevent expanding of non matched globs to *
+
