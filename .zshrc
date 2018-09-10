@@ -34,6 +34,7 @@ export KEYTIMEOUT=1
 
 # aliases
 alias gist='gist -pcso'
+alias dc='docker-compose'
 
 # history options
 HISTSIZE=10000000
