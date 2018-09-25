@@ -642,9 +642,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 383 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>0 286 796 486 0 0 1440 877 </string>
+	<string>0 277 796 486 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>482 0 955 877 0 0 1440 877 </string>
+	<string>437 124 650 427 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1218,6 +1218,8 @@
 			<string>Hack-Regular 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
+			<key>Non-ASCII Ligatures</key>
+			<false/>
 			<key>Normal Font</key>
 			<string>Hack-Regular 13</string>
 			<key>Only The Default BG Color Uses Transparency</key>
