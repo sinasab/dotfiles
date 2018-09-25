@@ -1,6 +1,8 @@
 # dotfiles
 
 ## Setup
+- Either clone this repo with `git clone --recursive` or download the submodules
+  with `git submodule update --init --recursive`
 ### Copy
 - dotfiles and oh-my-zsh folder into home directory
 
