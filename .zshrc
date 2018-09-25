@@ -89,3 +89,5 @@ setopt mail_warning    # warn if mail file was accessed from last login
 setopt nobeep      # prevent beeps
 unsetopt null_glob    # prevent expanding of non matched globs to *
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
