@@ -90,5 +90,10 @@ setopt mail_warning    # warn if mail file was accessed from last login
 setopt nobeep      # prevent beeps
 unsetopt null_glob    # prevent expanding of non matched globs to *
 
-
+# fzf stuff
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
