@@ -11,3 +11,6 @@
 
 ### Configure
 - iterm2 to use settings file, colors, and font
+
+### Reference:
+- `https://sourabhbajaj.com/mac-setup/Python/`
