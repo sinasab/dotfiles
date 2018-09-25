@@ -33,7 +33,7 @@ if [ ! -n "$SPACESHIP_PROMPT_ORDER" ]; then
     rust
     haskell
     julia
-    docker
+#    docker
     aws
     venv
     conda
