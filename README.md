@@ -8,6 +8,38 @@
 
 ### Install
 - hack font, tmux, zsh, iterm2
+```bash
+brew cask install \
+discord \
+docker \
+firefox \
+iterm2 \
+qbittorrent \
+slack \
+steam \
+sublime-text \
+typora \
+visual-studio-code \
+vlc \
+zoomus
+```
+
+```bash
+brew install
+ethereum \
+fzf \
+gist \
+git \
+htop \
+nvm \
+python \
+readline \
+tmux \
+tree \
+vim \
+yarn
+zsh
+```
 
 ### Configure
 - iterm2 to use settings file, colors, and font
