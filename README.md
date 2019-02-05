@@ -10,6 +10,7 @@
 - hack font, tmux, zsh, iterm2
 ```bash
 brew cask install \
+alfred \
 android-file-transfer \
 cryptomator \
 discord \
@@ -21,6 +22,7 @@ league-of-legends \
 opera \
 qbittorrent \
 slack \
+spectacle \
 steam \
 sublime-text \
 typora \
