@@ -10,10 +10,15 @@
 - hack font, tmux, zsh, iterm2
 ```bash
 brew cask install \
+android-file-transfer \
+cryptomator \
 discord \
 docker \
 firefox \
 iterm2 \
+kap \
+league-of-legends \
+opera \
 qbittorrent \
 slack \
 steam \
@@ -27,17 +32,19 @@ zoomus
 ```bash
 brew install
 ethereum \
+ffmpeg \
 fzf \
 gist \
 git \
 htop \
+hub \
 nvm \
 python \
 readline \
 tmux \
 tree \
 vim \
-yarn
+yarn \
 zsh
 ```
 
