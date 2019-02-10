@@ -32,7 +32,7 @@ zoomus
 ```
 
 ```bash
-brew install
+brew install \
 ethereum \
 ffmpeg \
 fzf \
