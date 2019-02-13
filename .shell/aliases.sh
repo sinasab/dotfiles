@@ -1,6 +1,5 @@
 alias gs='git status -s'
 alias grep='grep --color'
-alias ls='ls --color'
 alias mv='mv -v -i'
 alias rm='rm -v'
 alias cp='cp -v -i'
