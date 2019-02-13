@@ -5,9 +5,9 @@
 - Either clone this repo with `git clone --recursive` or download the submodules
   with `git submodule update --init --recursive`
 
-### Copy
+### Link
 
-- dotfiles and oh-my-zsh folder into home directory
+- files and folders from this repo to your home directory
 
 ### Install
 
