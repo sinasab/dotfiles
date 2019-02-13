@@ -1,19 +1,11 @@
 #!/usr/bin/env bash
 [ -n "$PS1" ];
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 
-# ------------------ aliases
-alias gs='git status -s'
-alias gcaa='git commit -a --amend --reuse-message=HEAD'
-alias ls='ls --color'
-alias mv='mv -v'
-alias rm='rm -v'
-alias cp='cp -v'
+source ~/.shell/exports.sh
+source ~/.shell/path.sh
+source ~/.shell/aliases.sh
 
 # ------------------- general options
-export EDITOR="vim"
-export LS_COLORS="ow=01;36;40" # ls colors
 shopt -s checkwinsize # Update window size after every command
 set -o noclobber # prevent file overwrite on stdout redirection
 shopt -s nocaseglob; # case-insensitive globbing

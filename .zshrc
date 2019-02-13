@@ -1,13 +1,14 @@
+source ~/.shell/exports.sh
+source ~/.shell/path.sh
+source ~/.shell/aliases.sh
+
 # oh-my-zsh stuff
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 ZSH_THEME="spaceship"
 ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=( \
   git \
-#  mercurial \
   zsh-autosuggestions \
   colorize \
   command-not-found \
@@ -17,25 +18,9 @@ plugins=( \
 )
 source $ZSH/oh-my-zsh.sh
 
-# path stuff
-PATH=$PATH:$HOME/bin
-PATH="${HOME}/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"
-PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-PATH="$PATH:/usr/local/share/python"
-export PATH;
-
 # keybindings
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward
-
-# exports
-export EDITOR=vim
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-export KEYTIMEOUT=1
-
-# aliases
-alias gist='gist -pcso'
-alias dc='docker-compose'
 
 # history options
 HISTSIZE=10000000
@@ -94,6 +79,5 @@ unsetopt null_glob    # prevent expanding of non matched globs to *
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # nvm stuff
-export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
