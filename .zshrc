@@ -3,7 +3,7 @@ source ~/.shell/path.sh
 source ~/.shell/aliases.sh
 
 # -------- oh-my-zsh stuff
-ZSH_CUSTOM="~/.shell/.omz-custom/"
+ZSH_CUSTOM="~/.shell/omz-custom"
 ZSH_THEME="spaceship"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
