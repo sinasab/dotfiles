@@ -25,8 +25,12 @@ Then use it to install everything via the [`Brewfile`](https://github.com/Homebr
 $ brew bundle
 ```
 
+Also install some global npm dependencies:
+
 ```bash
-$ yarn global add vtop
+$ yarn global add \
+tldr \
+vtop
 ```
 
 ### Install
