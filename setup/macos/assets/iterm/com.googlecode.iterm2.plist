@@ -623,9 +623,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>918 149 1616 721 0 0 3440 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1329 320 928 394 0 0 3440 1417 </string>
+	<string>1329 267 1018 447 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>453 204 570 452 0 0 3440 1417 </string>
+	<string>186 548 666 452 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1203 294 585 452 0 0 3440 1417 </string>
 	<key>New Bookmarks</key>
@@ -1214,7 +1214,7 @@
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
