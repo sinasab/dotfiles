@@ -5,9 +5,6 @@ sudo systemsetup -setremotelogin off
 # Disable wake-on modem
 sudo systemsetup -setwakeonmodem off
 
-# Disable wake-on LAN
-sudo systemsetup -setwakeonnetworkaccess off
-
 # Disable guest account login
 sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 
@@ -37,8 +34,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Set a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 6
+defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 #Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
