@@ -33,3 +33,5 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 SPACESHIP_RPROMPT_ORDER=(vi_mode)
+SPACESHIP_VI_MODE_INSERT=""
+SPACESHIP_VI_MODE_NORMAL=[vi-mode]
