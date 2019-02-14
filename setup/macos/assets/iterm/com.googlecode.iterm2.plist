@@ -579,11 +579,15 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>76E8F8B0-B03D-491B-9EA1-80F0241B09CA</string>
+	<key>DimBackgroundWindows</key>
+	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
 	<key>EnableProxyIcon</key>
 	<true/>
 	<key>HideScrollbar</key>
+	<true/>
+	<key>HideTab</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
@@ -623,7 +627,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>918 149 1616 721 0 0 3440 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1329 267 1018 447 0 0 3440 1417 </string>
+	<string>1329 267 796 486 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>186 548 666 452 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -806,7 +810,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blinking Cursor</key>
-			<true/>
+			<false/>
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
@@ -1326,6 +1330,10 @@
 	<date>2019-02-14T23:07:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.2787234575320513</real>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
