@@ -1,0 +1,1 @@
+/Users/sina-mbp/projects/dotfiles/.shell/omz-custom/themes/spaceship-prompt/spaceship.zsh-theme

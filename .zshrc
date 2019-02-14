@@ -4,7 +4,7 @@ source $HOME/.shell/aliases.sh
 
 # -------- oh-my-zsh stuff
 ZSH_CUSTOM="$HOME/.shell/omz-custom"
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=( \
