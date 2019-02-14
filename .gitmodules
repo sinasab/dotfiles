@@ -7,3 +7,9 @@
 [submodule ".shell/omz-custom/themes/spaceship-prompt"]
 	path = .shell/omz-custom/themes/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git
+[submodule ".shell/omz-custom/plugins/zsh-autosuggestions"]
+	path = .shell/omz-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".shell/omz-custom/plugins/zsh-history-substring-search"]
+	path = .shell/omz-custom/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
