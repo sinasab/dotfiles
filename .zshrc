@@ -1,9 +1,9 @@
-source ~/.shell/exports.sh
-source ~/.shell/path.sh
-source ~/.shell/aliases.sh
+source $HOME/.shell/exports.sh
+source $HOME/.shell/path.sh
+source $HOME/.shell/aliases.sh
 
 # -------- oh-my-zsh stuff
-ZSH_CUSTOM="~/.shell/omz-custom"
+ZSH_CUSTOM="$HOME/.shell/omz-custom"
 ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -90,7 +90,7 @@ setopt nobeep      # prevent beeps
 unsetopt null_glob    # prevent expanding of non matched globs to *
 
 # fzf stuff
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # nvm stuff
 . "/usr/local/opt/nvm/nvm.sh"
