@@ -2,7 +2,7 @@
 
 ## Setup
 
-- Either clone this repo with `git clone --recursive` or download the submodules
+- Either clone this repo with `git clone --recursive https://github.com/sinasabet81/dotfiles.git` or download the submodules
   with `git submodule update --init --recursive`
 
 ### Run commands
@@ -10,7 +10,7 @@
 Symlink files and folders from this repo to your home directory using the shell script
 
 ```bash
-$ bash ./setup/install.sh
+$ ./setup/install.sh
 ```
 
 [Install homebrew](https://brew.sh/):
@@ -36,7 +36,7 @@ $ yarn global add vtop
 ### Additional system customizations
 
 ```bash
-$ bash ./setup/macos.sh
+$ ./setup/macos.sh
 ```
 
 ### Other

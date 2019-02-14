@@ -7,19 +7,22 @@ sudo systemsetup -setwakeonmodem off
 
 # Disable wake-on LAN
 sudo systemsetup -setwakeonnetworkaccess off
+
 # Disable guest account login
 sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
+
 # Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400;ok
+sudo pmset -a standbydelay 86400
+
 # disable boot sound effect
-sudo nvram SystemAudioVolume=" ";
+sudo nvram SystemAudioVolume=" "
 
 # "Menu bar: disable transparency"
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false;
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true;
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true;
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # disable smart quotes and dashes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -39,138 +42,140 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 #Require password immediately after sleep or screen saver begins"
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0;
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop"
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
-defaults write com.apple.screencapture type -string "png";
+defaults write com.apple.screencapture type -string "png"
 # Show hidden files by default"
-defaults write com.apple.finder AppleShowAllFiles -bool true;
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
-running "Show all filename extensions"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true;ok
+# "Show all filename extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-running "Show status bar"
-defaults write com.apple.finder ShowStatusBar -bool true;ok
+# "Show status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
 
-running "Show path bar"
-defaults write com.apple.finder ShowPathbar -bool true;ok
+# "Show path bar"
+defaults write com.apple.finder ShowPathbar -bool true
 
-running "Allow text selection in Quick Look"
-defaults write com.apple.finder QLEnableTextSelection -bool true;ok
+# "Allow text selection in Quick Lo"
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
-running "Display full POSIX path as Finder window title"
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;ok
+# "Display full POSIX path as Finder window title"
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-running "When performing a search, search the current folder by default"
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf";ok
+# "When performing a search, search the current folder by default"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-running "Disable the warning when changing a file extension"
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false;ok
+# "Disable the warning when changing a file extension"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-running "Enable spring loading for directories"
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true;ok
+# "Enable spring loading for directories"
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
-running "Remove the spring loading delay for directories"
-defaults write NSGlobalDomain com.apple.springing.delay -float 0;ok
+# "Remove the spring loading delay for directories"
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
-running "Avoid creating .DS_Store files on network volumes"
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true;ok
+# "Avoid creating .DS_Store files on network volumes"
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-running "Disable disk image verification"
+# "Disable disk image verification"
 defaults write com.apple.frameworks.diskimages skip-verify -bool true
 defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true;ok
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
-running "Automatically open a new Finder window when a volume is mounted"
+# "Automatically open a new Finder window when a volume is mounted"
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true;ok
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
-running "Use list view in all Finder windows by default"
+# "Use list view in all Finder windows by default"
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv";ok
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-running "Disable the warning before emptying the Trash"
-defaults write com.apple.finder WarnOnEmptyTrash -bool false;ok
+# "Disable the warning before emptying the Trash"
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-running "Empty Trash securely by default"
-defaults write com.apple.finder EmptyTrashSecurely -bool true;ok
+# "Empty Trash securely by default"
+defaults write com.apple.finder EmptyTrashSecurely -bool true
 
-running "Expand the following File Info panes: “General”, “Open with”, and “Sharing & Permissions”"
+# "Expand the following File Info panes: “General”, “Open with”, and “Sharing & Permissions”"
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
   General -bool true \
   OpenWith -bool true \
-  Privileges -bool true;
+  Privileges -bool true
 
-  running "Enable highlight hover effect for the grid view of a stack (Dock)"
-defaults write com.apple.dock mouse-over-hilite-stack -bool true;ok
+  # "Enable highlight hover effect for the grid view of a stack (Dock)"
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-running "Set the icon size of Dock items to 36 pixels"
-defaults write com.apple.dock tilesize -int 36;ok
+# "Set the icon size of Dock items to 36 pixels"
+defaults write com.apple.dock tilesize -int 36
 
-running "Change minimize/maximize window effect to scale"
-defaults write com.apple.dock mineffect -string "scale";ok
+# "Change minimize/maximize window effect to scale"
+defaults write com.apple.dock mineffect -string "scale"
 
-running "Minimize windows into their application’s icon"
-defaults write com.apple.dock minimize-to-application -bool true;ok
+# "Minimize windows into their application’s icon"
+defaults write com.apple.dock minimize-to-application -bool true
 
-running "Enable spring loading for all Dock items"
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true;ok
+# "Enable spring loading for all Dock items"
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
-running "Show indicator lights for open applications in the Dock"
-defaults write com.apple.dock show-process-indicators -bool true;ok
+# "Show indicator lights for open applications in the Dock"
+defaults write com.apple.dock show-process-indicators -bool true
 
-running "Don’t animate opening applications from the Dock"
-defaults write com.apple.dock launchanim -bool false;ok
+# "Don’t animate opening applications from the Dock"
+defaults write com.apple.dock launchanim -bool false
 
-running "Speed up Mission Control animations"
-defaults write com.apple.dock expose-animation-duration -float 0.1;ok
+# "Speed up Mission Control animations"
+defaults write com.apple.dock expose-animation-duration -float 0.1
 
-running "Don’t group windows by application in Mission Control"
+# "Don’t group windows by application in Mission Control"
 # (i.e. use the old Exposé behavior instead)
-defaults write com.apple.dock expose-group-by-app -bool false;ok
+defaults write com.apple.dock expose-group-by-app -bool false
 
-running "Disable Dashboard"
-defaults write com.apple.dashboard mcx-disabled -bool true;ok
+# "Disable Dashboard"
+defaults write com.apple.dashboard mcx-disabled -bool true
 
-running "Don’t show Dashboard as a Space"
-defaults write com.apple.dock dashboard-in-overlay -bool true;ok
+# "Don’t show Dashboard as a Space"
+defaults write com.apple.dock dashboard-in-overlay -bool true
 
-running "Don’t automatically rearrange Spaces based on most recent use"
-defaults write com.apple.dock mru-spaces -bool false;ok
+# "Don’t automatically rearrange Spaces based on most recent use"
+defaults write com.apple.dock mru-spaces -bool false
 
-running "Remove the auto-hiding Dock delay"
-defaults write com.apple.dock autohide-delay -float 0;ok
-running "Remove the animation when hiding/showing the Dock"
-defaults write com.apple.dock autohide-time-modifier -float 0;ok
+# "Remove the auto-hiding Dock delay"
+defaults write com.apple.dock autohide-delay -float 0
 
-running "Automatically hide and show the Dock"
-defaults write com.apple.dock autohide -bool true;ok
+# "Remove the animation when hiding/showing the Dock"
+defaults write com.apple.dock autohide-time-modifier -float 0
 
-running "Make Dock icons of hidden applications translucent"
-defaults write com.apple.dock showhidden -bool true;ok
+# "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool true
 
-running "Make Dock more transparent"
-defaults write com.apple.dock hide-mirror -bool true;ok
+# "Make Dock icons of hidden applications translucent"
+defaults write com.apple.dock showhidden -bool true
 
-running "Reset Launchpad, but keep the desktop wallpaper intact"
-find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete;
-running "Show the main window when launching Activity Monitor"
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true;ok
+# "Make Dock more transparent"
+defaults write com.apple.dock hide-mirror -bool true
 
-running "Visualize CPU usage in the Activity Monitor Dock icon"
-defaults write com.apple.ActivityMonitor IconType -int 5;ok
+# "Reset Launchpad, but keep the desktop wallpaper intact"
+find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
-running "Show all processes in Activity Monitor"
-defaults write com.apple.ActivityMonitor ShowCategory -int 0;ok
+# "Show the main window when launching Activity Monitor"
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
-running "Sort Activity Monitor results by CPU usage"
+# "Visualize CPU usage in the Activity Monitor Dock icon"
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# "Show all processes in Activity Monitor"
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# "Sort Activity Monitor results by CPU usage"
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
-defaults write com.apple.ActivityMonitor SortDirection -int 0;ok
+defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 
-running "Enable the debug menu in Disk Utility"
+# "Enable the debug menu in Disk Utility"
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
-defaults write com.apple.DiskUtility advanced-image-options -bool true;ok
+defaults write com.apple.DiskUtility advanced-image-options -bool true
