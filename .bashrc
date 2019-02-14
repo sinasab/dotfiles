@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 [ -n "$PS1" ];
 
-source $HOME/.shell/exports.sh
-source $HOME/.shell/path.sh
-source $HOME/.shell/aliases.sh
+source $HOME/.shell/common/index.sh
 
 # ------------------- general options
 shopt -s checkwinsize # Update window size after every command
@@ -43,5 +41,3 @@ set completion-ignore-case on # Use case-insensitive TAB autocompletion.
 set show-all-if-ambiguous off # Auto list TAB completions.
 set completion-map-case on # Treat hyphens and underscores as equivalent
 set show-all-if-ambiguous on # Display matches for ambiguous patterns at first tab press
-
-[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash

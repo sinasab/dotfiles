@@ -1,40 +1,5 @@
-source $HOME/.shell/exports.sh
-source $HOME/.shell/path.sh
-source $HOME/.shell/aliases.sh
-
-# -------- oh-my-zsh stuff
-ZSH_CUSTOM="$HOME/.shell/omz-custom"
-ZSH_THEME="spaceship"
-HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
-plugins=( \
-  colorize \
-  command-not-found \
-  copybuffer \
-  copydir \
-  cp \
-  copyfile \
-  docker \
-  docker-compose \
-  git \
-  gitfast \
-  history-substring-search \
-  kubectl \
-  minikube \
-  mosh \
-  npm \
-  npx \
-  nvm \
-  vi-mode \
-  vscode \
-  yarn \
-  zsh-autosuggestions \
-  zsh-history-substring-search \
-  zsh_reload \
-  zsh-syntax-highlighting \  #  needs to be last one sourced
-)
-source $ZSH/oh-my-zsh.sh
-# -------- end oh-my-zsh stuff
+source $HOME/.shell/common/index.sh
+source $HOME/.shell/zsh/index.sh
 
 # keybindings
 bindkey -v
@@ -65,22 +30,10 @@ setopt complete_in_word # Allow completion from within a word/phrase
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt correct_all # don't ask if i misspelled stuff
 
-# change window titles to custom things easily
-# Source: http://superuser.com/a/344397
-DISABLE_AUTO_TITLE="true"
-set_iterm_name() {
-  mode=$1; shift
-  echo -ne "\033]$mode;$@\007"
-}
-iterm_both () { set_iterm_name 0 $@; }
-iterm_tab () { set_iterm_name 1 $@; }
-iterm_window () { set_iterm_name 2 $@; }
-
 # misc shell options
 setopt auto_cd      # chdir to directory if we type its name only
 setopt auto_pushd    # put directory on dir stack after chdir
 setopt pushd_ignore_dups  # do not place duplicates on directory stack
-setopt correct      # correct misspelled commands
 setopt interactive_comments # allow comments even in interactive shells
 setopt glob_complete    # set complete globing
 setopt extended_glob    # set extended globing
@@ -88,10 +41,3 @@ setopt null_glob    # delete word if no match is found
 setopt mail_warning    # warn if mail file was accessed from last login
 setopt nobeep      # prevent beeps
 unsetopt null_glob    # prevent expanding of non matched globs to *
-
-# fzf stuff
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
-# nvm stuff
-. "/usr/local/opt/nvm/nvm.sh"
-

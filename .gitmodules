@@ -1,15 +1,15 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".shell/omz-custom/plugins/zsh-syntax-highlighting"]
-	path = .shell/omz-custom/plugins/zsh-syntax-highlighting
+[submodule ".shell/zsh/omz-custom/plugins/zsh-syntax-highlighting"]
+	path = .shell/zsh/omz-custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".shell/omz-custom/themes/spaceship-prompt"]
-	path = .shell/omz-custom/themes/spaceship-prompt
+[submodule ".shell/zsh/omz-custom/themes/spaceship-prompt"]
+	path = .shell/zsh/omz-custom/themes/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git
-[submodule ".shell/omz-custom/plugins/zsh-autosuggestions"]
-	path = .shell/omz-custom/plugins/zsh-autosuggestions
+[submodule ".shell/zsh/omz-custom/plugins/zsh-autosuggestions"]
+	path = .shell/zsh/omz-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".shell/omz-custom/plugins/zsh-history-substring-search"]
-	path = .shell/omz-custom/plugins/zsh-history-substring-search
+[submodule ".shell/zsh/omz-custom/plugins/zsh-history-substring-search"]
+	path = .shell/zsh/omz-custom/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search
