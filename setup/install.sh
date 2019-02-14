@@ -22,7 +22,7 @@ for d in "${dotfiles[@]}"; do
         if [ -f ~/$d ] || [ -d ~/$d ]; then
             # backup things that will be overwritten
             mkdir -p ~/.old_dotfiles_$timestamp/;
-            mv -r ~/$d ~/.old_dotfiles_$timestamp/;
+            mv  ~/$d ~/.old_dotfiles_$timestamp/;
             old_dotfiles+=$d;
         fi
         ln -s "$(pwd)/$d" ~/$d;
