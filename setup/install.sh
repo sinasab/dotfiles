@@ -1,10 +1,10 @@
 dotfiles=( # list of all dotfiles to do simple symlink for
-    .oh-my-zsh \
-    .shell \
     .bashrc \
     .editorconfig \
     .gitconfig \
     .gitignore_global \
+    .oh-my-zsh \
+    .shell \
     .tmux.conf \
     .vimrc \
     .zshrc \
