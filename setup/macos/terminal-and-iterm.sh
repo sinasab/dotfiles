@@ -66,3 +66,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool true
 # Install material light and dark themes for iterm
 open "${relative_dir}/assets/iterm/material-light.itermcolors"
 open "${relative_dir}/assets/iterm/material-dark.itermcolors"
+
+# Load prefs from custom folder
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/projects/dotfiles/setup/macos/assets/iterm"
