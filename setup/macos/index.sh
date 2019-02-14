@@ -10,3 +10,4 @@ relative_dir="$(dirname "$0")"
 source $relative_dir/dock.sh
 source $relative_dir/safari-and-webkit.sh
 source $relative_dir/spotlight.sh
+source $relative_dir/terminal-and-iterm.sh
