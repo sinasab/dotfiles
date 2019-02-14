@@ -13,3 +13,6 @@
 [submodule ".shell/zsh/omz-custom/plugins/zsh-history-substring-search"]
 	path = .shell/zsh/omz-custom/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule ".shell/zsh/omz-custom/zsh-syntax-highlighting"]
+	path = .shell/zsh/omz-custom/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
