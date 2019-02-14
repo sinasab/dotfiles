@@ -2,6 +2,8 @@
 # Terminal & iTerm                                                            #
 ###############################################################################
 
+relative_dir="$(dirname "$0")"
+
 # ----- Terminal.app
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -19,13 +21,13 @@ tell application "Terminal"
 	local allOpenedWindows
 	local initialOpenedWindows
 	local windowID
-	set themeName to "Solarized Dark xterm-256color"
+	set themeName to "solarized-dark-xterm-256-color"
 	(* Store the IDs of all the open terminal windows. *)
 	set initialOpenedWindows to id of every window
 	(* Open the custom theme so that it gets added to the list
 	   of available terminal themes (note: this will open two
 	   additional terminal windows). *)
-	do shell script "open '$HOME/init/" & themeName & ".terminal'"
+	do shell script "open '$relative_dir/assets/" & themeName & ".terminal'"
 	(* Wait a little bit to ensure that the custom theme is added. *)
 	delay 1
 	(* Set the custom theme as the default terminal theme. *)
@@ -48,8 +50,6 @@ end tell
 EOD
 
 # ----- iTerm.app
-
-relative_dir="$(dirname "$0")"
 
 # Open the app so the preference files get initialized
 open -g "/Applications/iTerm.app" && sleep 2
