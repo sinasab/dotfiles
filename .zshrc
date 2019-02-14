@@ -2,21 +2,39 @@ source ~/.shell/exports.sh
 source ~/.shell/path.sh
 source ~/.shell/aliases.sh
 
-# oh-my-zsh stuff
+# -------- oh-my-zsh stuff
 ZSH_THEME="spaceship"
-ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=( \
-  git \
-  zsh-autosuggestions \
   colorize \
   command-not-found \
+  copybuffer \
+  copydir \
   cp \
-  zsh-syntax-highlighting \
+  copyfile \
+  docker \
+  docker-compose \
+  git \
+  gitfast \
   history-substring-search \
+  kubectl \
+  minikube \
+  mosh \
+  npm \
+  npx \
+  nvm \
+  thefuck \
+  vi-mode \
+  vscode \
+  yarn \
+  zsh-autosuggestions \
+  zsh-history-substring-search \
+  zsh_reload \
+  zsh-syntax-highlighting \  #  needs to be last one sourced
 )
 source $ZSH/oh-my-zsh.sh
+# -------- end oh-my-zsh stuff
 
 # keybindings
 bindkey -v
@@ -46,10 +64,6 @@ setopt auto_name_dirs # any parameter that is set to the absolute name of a dire
 setopt complete_in_word # Allow completion from within a word/phrase
 unsetopt menu_complete # do not autoselect the first completion entry
 unsetopt correct_all # don't ask if i misspelled stuff
-# edit commands in vim by pressing v while in command mode
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd V edit-command-line
 
 # change window titles to custom things easily
 # Source: http://superuser.com/a/344397
