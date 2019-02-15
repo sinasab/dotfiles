@@ -112,4 +112,4 @@ defaults write com.apple.dock wvous-bl-modifier -int 262144
 defaults write com.apple.dock wvous-br-modifier -int 262144
 
 # ----- Restart the dock
-killall Dock
+killall Dock &> /dev/null

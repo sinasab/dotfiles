@@ -27,7 +27,7 @@ tell application "Terminal"
 	(* Open the custom theme so that it gets added to the list
 	   of available terminal themes (note: this will open two
 	   additional terminal windows). *)
-	do shell script "open '$relative_dir/assets/" & themeName & ".terminal'"
+	do shell script "open '$relative_dir/assets/terminal/" & themeName & ".terminal'"
 	(* Wait a little bit to ensure that the custom theme is added. *)
 	delay 1
 	(* Set the custom theme as the default terminal theme. *)
@@ -49,6 +49,8 @@ tell application "Terminal"
 end tell
 EOD
 
+killall Terminal &> /dev/null
+
 # ----- iTerm.app
 
 # Open the app so the preference files get initialized
@@ -60,9 +62,6 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Quit the app
 sleep 2 && osascript -e 'quit app "iTerm"'
 
-# Reenable warning when quitting because I'm a noob lol
-defaults write com.googlecode.iterm2 PromptOnQuit -bool true
-
 # Install material light and dark themes for iterm
 open "${relative_dir}/assets/iterm/material-light.itermcolors"
 open "${relative_dir}/assets/iterm/material-dark.itermcolors"
@@ -70,3 +69,4 @@ open "${relative_dir}/assets/iterm/material-dark.itermcolors"
 # Load prefs from custom folder
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/projects/dotfiles/setup/macos/assets/iterm"
+killall iTerm2 &> /dev/null
