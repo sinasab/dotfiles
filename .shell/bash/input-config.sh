@@ -1,4 +1,3 @@
-
 # -------------- input config
 set bell-style none # Disable beeping and window flashing.
 set completion-ignore-case on # Use case-insensitive TAB autocompletion.

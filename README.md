@@ -49,3 +49,10 @@ $ ./setup/macos/index.sh
 
 - https://github.com/mathiasbynens/dotfiles
 - probably others
+
+### TODOs
+
+- tighten macos settings
+- version control vscode setup
+- version control alacritty settings
+- add spin-up-able test environment
