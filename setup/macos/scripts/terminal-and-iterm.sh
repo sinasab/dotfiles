@@ -68,5 +68,5 @@ open "${relative_dir}/assets/iterm/material-dark.itermcolors"
 
 # Load prefs from custom folder
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/projects/dotfiles/setup/macos/assets/iterm"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.shell/iterm/"
 killall iTerm2 &> /dev/null

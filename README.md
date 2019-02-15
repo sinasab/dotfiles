@@ -35,20 +35,17 @@ vtop
 
 ### Install
 
-TODO
-
-- apply hack font to os
-- Map Mouse Button 5 to open Missino Control
-
-Run this for some macos system config:
+Run this for some automated macos system config:
 
 ```bash
 $ ./setup/macos/index.sh
 ```
 
-### Other
+Then some manual MacOS tweaks
 
-- remap caps lock, stuff like that TODO
+- apply hack font to os
+- Map Mouse Button 5 to open Mission Control
+- remap caps lock to ctrl
 
 ### References
 
@@ -57,7 +54,7 @@ $ ./setup/macos/index.sh
 
 ### TODOs
 
-- tighten macos settings
+- tighten macos settings (automate all of it)
 - version control vscode setup
 - version control alacritty settings
-- add spin-up-able test environment
+- add spin-up-able test environment dockerfiles maybe
