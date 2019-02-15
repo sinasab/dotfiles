@@ -21,7 +21,3 @@ source $relative_dir/scripts/spotlight.sh
 source $relative_dir/scripts/ssd-tweaks.sh
 source $relative_dir/scripts/terminal-and-iterm.sh
 source $relative_dir/scripts/time-machine.sh
-
-# references
-# - https://github.com/mathiasbynens/dotfiles/blob/master/.macos
-# - https://github.com/atomantic/dotfiles/blob/master/install.sh

@@ -4,7 +4,7 @@
 
 # Hide Spotlight tray-icon (and subsequent helper)
 # disabled due to needing system integrity protection disabled
-# see https://github.com/mathiasbynens/dotfiles/issues/587
+# artifact: https://github.com/mathiasbynens/dotfiles/issues/587
 # sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Disable Spotlight indexing for any volume that gets mounted and has not yet

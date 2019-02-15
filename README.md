@@ -55,7 +55,9 @@ Then some manual MacOS tweaks
 ### References
 
 - https://github.com/mathiasbynens/dotfiles
-- probably others
+- https://github.com/atomantic/dotfiles/
+- https://github.com/herrbischoff/awesome-macos-command-line/
+- probably others that I forgot :(
 
 ### TODOs
 

@@ -9,8 +9,6 @@ shopt -s extglob
 # match filenames in case-insensitive fashion
 shopt -s nocaseglob
 
-# str8 copypasta from https://github.com/mathiasbynens/dotfiles/blob/master/.bash_profile
-
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
