@@ -35,7 +35,12 @@ vtop
 
 ### Install
 
-- apply hack font to os TODO
+TODO
+
+- apply hack font to os
+- Map Mouse Button 5 to open Missino Control
+
+Run this for some macos system config:
 
 ```bash
 $ ./setup/macos/index.sh
