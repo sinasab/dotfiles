@@ -18,5 +18,5 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
-killall "Google Chrome" &> /dev/null
-killall "Google Chrome Canary" &> /dev/null
+# killall "Google Chrome" &> /dev/null
+# killall "Google Chrome Canary" &> /dev/null
