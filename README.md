@@ -35,14 +35,12 @@ vtop
 
 ### Install
 
-- apply hack font to os, and +colors to iterm2
-
-### Additional system customizations
+- apply hack font to os TODO
 
 ```bash
-$ ./setup/macos.sh
+$ ./setup/macos/index.sh
 ```
 
 ### Other
 
-- remap caps lock, stuff like that
+- remap caps lock, stuff like that TODO
