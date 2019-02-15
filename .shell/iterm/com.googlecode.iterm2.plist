@@ -1318,7 +1318,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/projects/dotfiles/setup/macos/assets/iterm</string>
+	<string>~/.shell/iterm/</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>

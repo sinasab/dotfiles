@@ -13,8 +13,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+# ----- Keyboard 
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -33,6 +32,27 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# Stop iTunes from responding to the keyboard media keys
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+# Keyboard shortcut to toggle mission control / application menus view
+# see these resources for more info on this:
+# http://krypted.com/mac-os-x/defaults-symbolichotkeys/
+# https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785
+# ctrl-up to mission control
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 32 '{ enabled = 1; value = { parameters = ( 65535, 126, 262144 ); type = standard; }; }'
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 34 '{ enabled = 1; value = { parameters = ( 65535, 126, 393216); type = standard; }; }'
+# # mouse button 5 to mission control
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 38 '{ enabled = 1; value = { parameters = ( 16, 16, 0); type = button; }; }'
+# defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 40 '{ enabled = 1; value = { parameters = ( 16, 16, 131072); type = button; }; }'
+relative_dir="$(dirname "$0")"
+defaults import com.apple.symbolichotkeys $(pwd)/setup/macos/assets/system/symbolichotkeys.plist
+
+# ----- Other
+
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
@@ -46,6 +66,3 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Americas/Los Angeles" > /dev/null
-
-# Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
