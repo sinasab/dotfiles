@@ -1,17 +1,17 @@
 {
-    "workbench.iconTheme": "eq-material-theme-icons",
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    },
-    "window.zoomLevel": 0,
-    "git.autofetch": true,
-    "editor.tabSize": 2,
-    "workbench.colorTheme": "Quiet Light"
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "window.zoomLevel": 0,
+  "git.autofetch": true,
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Quiet Light"
 }

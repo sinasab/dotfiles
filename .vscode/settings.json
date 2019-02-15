@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    ".oh-my-zsh": true,
+    ".shell/zsh/omz-custom/plugins/zsh-history-substring-search": true,
+    ".shell/zsh/omz-custom/plugins/zsh-autosuggestions": true,
+    ".shell/zsh/omz-custom/plugins/zsh-syntax-highlighting": true,
+    ".shell/zsh/omz-custom/themes/spaceship-prompt": true
+  }
+}
