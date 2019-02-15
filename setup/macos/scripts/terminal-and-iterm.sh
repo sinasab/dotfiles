@@ -49,7 +49,7 @@ tell application "Terminal"
 end tell
 EOD
 
-killall Terminal &> /dev/null
+# killall Terminal &> /dev/null
 
 # ----- iTerm.app
 
