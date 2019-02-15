@@ -44,3 +44,8 @@ $ ./setup/macos/index.sh
 ### Other
 
 - remap caps lock, stuff like that TODO
+
+### References
+
+- https://github.com/mathiasbynens/dotfiles
+- probably others
