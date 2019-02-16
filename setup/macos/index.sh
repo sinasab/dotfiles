@@ -9,6 +9,7 @@ relative_dir="$(dirname "$0")"
 
 source $relative_dir/scripts/activity-monitor.sh
 source $relative_dir/scripts/app-store.sh
+source $relative_dir/scripts/date-time-locale.sh
 source $relative_dir/scripts/dock.sh
 source $relative_dir/scripts/finder.sh
 source $relative_dir/scripts/general-ui-ux.sh

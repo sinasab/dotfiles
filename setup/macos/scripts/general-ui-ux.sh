@@ -24,6 +24,10 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # disabled because it's loud
 # sudo systemsetup -setremotelogin off
 
+# Play sound when plugged in
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true && \
+open /System/Library/CoreServices/PowerChime.app
+
 # Sometimes show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
@@ -79,6 +83,7 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+killall -9 NotificationCenter &> /dev/null
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -94,3 +99,6 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# set login screen text
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "sinasabet81@gmail.com"

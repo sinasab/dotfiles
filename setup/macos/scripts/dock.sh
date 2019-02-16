@@ -25,6 +25,12 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool true
 
+# No bouncing
+defaults write com.apple.dock no-bouncing -bool true
+
+# Lock the dock size
+defaults write com.apple.Dock size-immutable -bool yes
+
 # Remove the auto-hiding Dock delay
 defaults write com.apple.dock autohide-delay -float 0
 
