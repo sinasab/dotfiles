@@ -177,4 +177,5 @@ $ ./setup/macos/index.sh
 - tighten macos settings (automate all of it)
 - version control vscode setup
 - version control alacritty settings
+- look into open source alfred alternatives, maybe [zazu](https://github.com/tinytacoteam/zazu)? 
 - add spin-up-able test environment dockerfiles maybe
