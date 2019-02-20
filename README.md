@@ -24,6 +24,7 @@ $ ./setup/install.sh
 ```bash
 $ yarn global add \
 tldr \
+gtop \
 vtop
 ```
 
