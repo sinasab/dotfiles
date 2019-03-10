@@ -92,3 +92,30 @@ nnoremap <C-H> <C-W><C-H>
 
 nnoremap ; :
 nnoremap <space> zz
+
+""""""""""""""""""
+" vim plug stuff "
+""""""""""""""""""
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'christoomey/vim-tmux-navigator'
+" Plug 'junegunn/vim-easy-align'
+" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+" Plug 'fatih/vim-go', { 'tag': '*' }
+" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+
+" Plugin outside ~/.vim/plugged with post-update hook
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Initialize plugin system
+call plug#end()
