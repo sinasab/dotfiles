@@ -1,10 +1,8 @@
 " To start vim without using a vimrc file, use: vim -u NORC or -u NONE
 
 set nocompatible "this must be first bc side effects
-syntax on
 colorscheme desert
 highlight LineNr ctermfg=yellow ctermbg=237
-filetype plugin indent on " enables detection, plugins, and indenting in one step
 au FocusLost * :wa " save when losing focus
 
 " attempt to make backup and swap directories
@@ -13,20 +11,14 @@ silent !mkdir ~/.vim/backup > /dev/null 2>&1
 silent !mkdir ~/.vim/swp > /dev/null 2>&1
 
 " here comes the config...
-set autoindent
-set backspace=indent,eol,start
 set backupdir=~/.vim/backup// " where backup (~) files go
 set clipboard=unnamed " use macos system clipboard
 set columns=80
 set directory=~/.vim/swp// " where swp files go
-set encoding=utf-8
 set expandtab
 set hlsearch " highlight search terms
 set ignorecase " ignore case when searching
-set incsearch " show search matches as you type
-set laststatus=2
 set list " highlight whitespaces
-set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
 set modelines=0 " dodges some exploits apparently
 set mouse=a
 set mousehide
@@ -36,7 +28,6 @@ set nu
 set number " always show line numbers
 set path+=** " provides tab-completion searching into subfolders
 set relativenumber
-set scrolloff=10
 set shiftround " use multiple of shiftwidth when indenting with < and >
 set shiftwidth=2 " number of spaces to use for autoindenting
 set showcmd
@@ -47,18 +38,15 @@ set splitbelow " open horizontal splits to the bottom instead of top
 set splitright " open vertical splits to the right instead of left
 set statusline=%.40F%=%m\ %Y\ Line:\ %3l/%L[%3p%%]
 set tabstop=2 " tab is 4 spaces
-set textwidth=80
+" set textwidth=80
 set title " change the terminal's title
-set ttimeout
-set ttimeoutlen=100
 set ttyfast
-set undofile
+" set undofile
 set visualbell " don't beep
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=*.swp,*.bak,*.pyc,*.class
 set wildignore+=node_modules/*,bower_components/*
-set wildmenu " display all matching files when we tab complete
 set wildmode=list:longest
 set wrap
 set colorcolumn=85
@@ -96,6 +84,8 @@ nnoremap <space> zz
 """"""""""""""""""
 " vim plug stuff "
 """"""""""""""""""
+
+" Install vim-plug if it's not already
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -103,6 +93,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
+" Install any uninstalled plugins
+if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+  autocmd VimEnter * PlugInstall | q
+endif
+
+Plug 'tpope/vim-sensible'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
 " Plug 'junegunn/vim-easy-align'
@@ -116,6 +113,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 " Initialize plugin system
 call plug#end()
