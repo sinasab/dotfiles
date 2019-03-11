@@ -1,7 +1,6 @@
 " To start vim without using a vimrc file, use: vim -u NORC or -u NONE
 
 set nocompatible "this must be first bc side effects
-colorscheme desert
 highlight LineNr ctermfg=yellow ctermbg=237
 au FocusLost * :wa " save when losing focus
 
@@ -102,6 +101,12 @@ endif
 Plug 'tpope/vim-sensible'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
+" apprentice theme
+Plug 'romainl/Apprentice'
+Plug 'scrooloose/nerdcommenter'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'easymotion/vim-easymotion'
+
 " Plug 'junegunn/vim-easy-align'
 " Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 " Plug 'SirVer/ultisnips'
@@ -117,3 +122,5 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
 call plug#end()
+
+colors apprentice
