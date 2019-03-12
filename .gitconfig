@@ -61,5 +61,3 @@
   excludesfile = ~/.gitignore_global
 [credential]
   helper = osxkeychain
-  helper = store --file ~/.git_credentials
-  helper = cache --timeout 30000
