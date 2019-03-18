@@ -101,24 +101,21 @@ endif
 Plug 'tpope/vim-sensible'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'christoomey/vim-tmux-navigator'
-" apprentice theme
-Plug 'romainl/Apprentice'
+Plug 'romainl/Apprentice' " apprentice theme
 Plug 'scrooloose/nerdcommenter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'easymotion/vim-easymotion'
+Plug 'bagrat/vim-buffet'
+Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" Plug 'junegunn/vim-easy-align'
-" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-" Plug 'SirVer/ultisnips'
-" Plug 'honza/vim-snippets'
-" Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 " Plug 'fatih/vim-go', { 'tag': '*' }
 " Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " or ctrl-p?"
 
 " Initialize plugin system
 call plug#end()
