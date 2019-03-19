@@ -12,7 +12,6 @@ silent !mkdir ~/.vim/swp > /dev/null 2>&1
 " here comes the config...
 set backupdir=~/.vim/backup// " where backup (~) files go
 set clipboard=unnamed " use macos system clipboard
-set columns=80
 set directory=~/.vim/swp// " where swp files go
 set expandtab
 set hlsearch " highlight search terms
