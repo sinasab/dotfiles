@@ -18,7 +18,6 @@ plugins=( \
   minikube \
   mosh \
   npm \
-  npx \
   nvm \
   vi-mode \
   vscode \
