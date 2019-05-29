@@ -25,6 +25,6 @@ plugins=( \
   zsh-autosuggestions \
   zsh-history-substring-search \
   zsh_reload \
-  zsh-syntax-highlighting \  #  needs to be last one sourced
-)
+  zsh-syntax-highlighting)  #  needs to be last one sourced
+
 source $ZSH/oh-my-zsh.sh
