@@ -17,8 +17,8 @@ plugins=( \
   kubectl \
   minikube \
   mosh \
-  npm \
-  nvm \
+  # npm \
+  # nvm \
   vi-mode \
   vscode \
   yarn \
